@@ -1,0 +1,4 @@
+1. AI chatbot based on the science fair guide book. Chat and discussions should be only bounded to this site on ISEF science fair - through Credible sources. should be able to help, guide and suggest or generate new ideas for the projects based on their area of interest and specified field.
+2. Users should be able to blog only by using their authentication through gmail authentication.
+3. Should be able to monitor the site hits and the stats of the site. Also the admin should get a weekly report to admin email id.
+4. Should be able to send a private email to the Admin seeking for additional support and help.

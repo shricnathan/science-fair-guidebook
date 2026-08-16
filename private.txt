@@ -1,0 +1,10 @@
+GitHub
+YOUR_GITHUB_TOKEN
+
+Vercel
+YOUR_VERCEL_TOKEN
+
+Supabase
+Project URL: YOUR_SUPABASE_URL
+Anon public key: YOUR_ANON_KEY
+Service role secret key: YOUR_SERVICE_ROLE_KEY
