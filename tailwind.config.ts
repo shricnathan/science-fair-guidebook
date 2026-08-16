@@ -1,6 +1,4 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+const config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,12 +12,8 @@ const config: Config = {
         pink: '#EC4899',
         gold: '#FBBF24',
       },
-      fontFamily: {
-        sans: ['system-ui', 'sans-serif'],
-      },
     },
   },
-  plugins: [],
 }
 
 export default config
