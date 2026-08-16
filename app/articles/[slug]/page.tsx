@@ -9,6 +9,8 @@ interface ArticlePageProps {
   }
 }
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   const articles = getArticles()
   return articles.map((article) => ({
