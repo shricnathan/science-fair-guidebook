@@ -11,22 +11,32 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-navy to-purple text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">Science Fair Guidebook</h1>
-          <p className="text-xl mb-8 opacity-90">
-            Your complete guide to science fair success
+      <section className="bg-navy text-white py-32 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple to-magenta opacity-10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan to-purple opacity-10 rounded-full blur-3xl"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-7xl font-bold mb-6 leading-tight">
+            <span>THE</span>
+            <br />
+            <span className="bg-gradient-to-r from-purple via-magenta to-cyan bg-clip-text text-transparent">
+              SCIENCE FAIR
+            </span>
+            <br />
+            <span className="text-cyan">GUIDEBOOK</span>
+          </h1>
+          <p className="text-2xl mb-12 opacity-90 max-w-2xl">
+            From idea to ISEF — Your complete guide to conducting research, creating an outstanding project, and sharing your ideas with confidence.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 flex-wrap">
             <Link
               href="/articles"
-              className="bg-cyan text-navy px-8 py-3 rounded-lg font-bold hover:opacity-90 transition-opacity"
+              className="bg-cyan text-navy px-8 py-4 rounded font-bold hover:shadow-lg hover:shadow-cyan/50 transition-all text-lg"
             >
               Read Articles
             </Link>
             <Link
               href="/topics"
-              className="border-2 border-cyan text-cyan px-8 py-3 rounded-lg font-bold hover:bg-cyan hover:text-navy transition-colors"
+              className="border-2 border-cyan text-cyan px-8 py-4 rounded font-bold hover:bg-cyan hover:text-navy transition-all text-lg"
             >
               Browse Topics
             </Link>
@@ -84,15 +94,19 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-navy text-white py-16">
+      <section className="bg-navy text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to start your project?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Download our templates and get everything you need
+          <h2 className="text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-cyan to-purple bg-clip-text text-transparent">
+              Ready to start your project?
+            </span>
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Download our templates and get everything you need to succeed
           </p>
           <Link
             href="/templates"
-            className="bg-cyan text-navy px-8 py-3 rounded-lg font-bold hover:opacity-90 transition-opacity inline-block"
+            className="bg-cyan text-navy px-8 py-4 rounded font-bold hover:shadow-lg hover:shadow-cyan/50 transition-all inline-block text-lg"
           >
             Get Templates
           </Link>

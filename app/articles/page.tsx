@@ -23,11 +23,15 @@ export default function ArticlesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-navy to-purple text-white py-12">
+      <section className="bg-navy text-white py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Science Fair Articles</h1>
-          <p className="text-lg opacity-90">
-            Learn everything you need to know about science fairs
+          <h1 className="text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-purple via-magenta to-cyan bg-clip-text text-transparent">
+              Science Fair Articles
+            </span>
+          </h1>
+          <p className="text-xl opacity-90 max-w-2xl">
+            Learn everything you need to know about science fairs — from research to presentation
           </p>
         </div>
       </section>

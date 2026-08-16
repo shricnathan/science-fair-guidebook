@@ -7,9 +7,9 @@ const config = {
     extend: {
       colors: {
         navy: '#0F1419',
-        cyan: '#00D4FF',
-        purple: '#A78BFA',
-        pink: '#EC4899',
+        cyan: '#00D9FF',
+        purple: '#8B5CF6',
+        magenta: '#D946EF',
         gold: '#FBBF24',
       },
     },
