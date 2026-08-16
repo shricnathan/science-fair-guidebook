@@ -4,22 +4,24 @@ import ArticleCard from '@/components/ArticleCard'
 import { notFound } from 'next/navigation'
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
+export const revalidate = 3600 // Revalidate every hour
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const articles = getArticles()
   return articles.map((article) => ({
     slug: article.slug,
   }))
 }
 
-export default function ArticlePage({ params }: ArticlePageProps) {
-  const article = getArticleBySlug(params.slug)
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const { slug } = await params
+  const article = getArticleBySlug(slug)
 
   if (!article) {
     notFound()
