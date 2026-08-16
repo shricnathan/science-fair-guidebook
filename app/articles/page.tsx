@@ -23,39 +23,37 @@ export default function ArticlesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-navy text-white py-20">
+      <section className="bg-gradient-to-r from-indigo via-indigo to-indigo text-white py-24">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple via-magenta to-cyan bg-clip-text text-transparent">
-              Science Fair Articles
-            </span>
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text">
+            Science Fair Articles
           </h1>
-          <p className="text-xl opacity-90 max-w-2xl">
+          <p className="text-xl opacity-90 max-w-2xl leading-relaxed">
             Learn everything you need to know about science fairs — from research to presentation
           </p>
         </div>
       </section>
 
       {/* Filters and Search */}
-      <section className="py-8 bg-lightGray">
+      <section className="py-12 bg-sage">
         <div className="container mx-auto px-4">
           <div className="flex flex-col gap-4 mb-6">
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder="🔍 Search articles..."
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value)
                 setFilter('all')
                 setFilterValue('')
               }}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan"
+              className="w-full px-6 py-3 border-2 border-cyan/30 rounded-lg bg-white text-near-black placeholder-cool-gray focus:outline-none focus:ring-2 focus:ring-cyan focus:border-cyan font-medium"
             />
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-6">
             <div>
-              <label className="block text-sm font-semibold mb-2">Filter by Stage:</label>
+              <label className="block text-sm font-bold mb-2 text-purple uppercase tracking-wide">Filter by Stage:</label>
               <select
                 value={filterValue}
                 onChange={(e) => {
@@ -63,7 +61,7 @@ export default function ArticlesPage() {
                   setFilterValue(e.target.value)
                   setSearchQuery('')
                 }}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan"
+                className="px-4 py-2.5 border-2 border-purple/30 rounded-lg bg-white text-near-black focus:outline-none focus:ring-2 focus:ring-purple focus:border-purple font-medium"
               >
                 <option value="">All Stages</option>
                 {PROJECT_STAGES.map((stage) => (
@@ -75,7 +73,7 @@ export default function ArticlesPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Filter by Category:</label>
+              <label className="block text-sm font-bold mb-2 text-purple uppercase tracking-wide">Filter by Category:</label>
               <select
                 value={filterValue}
                 onChange={(e) => {
@@ -83,7 +81,7 @@ export default function ArticlesPage() {
                   setFilterValue(e.target.value)
                   setSearchQuery('')
                 }}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan"
+                className="px-4 py-2.5 border-2 border-purple/30 rounded-lg bg-white text-near-black focus:outline-none focus:ring-2 focus:ring-purple focus:border-purple font-medium"
               >
                 <option value="">All Categories</option>
                 {ARTICLE_CATEGORIES.map((category) => (
@@ -98,16 +96,16 @@ export default function ArticlesPage() {
       </section>
 
       {/* Articles Grid */}
-      <section className="py-12">
+      <section className="py-16 bg-indigo">
         <div className="container mx-auto px-4">
           {articles.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-xl text-gray-500">No articles found. Try a different search.</p>
+            <div className="text-center py-16">
+              <p className="text-xl text-cool-gray">No articles found. Try a different search.</p>
             </div>
           ) : (
             <>
-              <p className="text-gray-600 mb-6">{articles.length} articles found</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <p className="text-cool-gray mb-8 text-lg font-medium">📚 {articles.length} articles found</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {articles.map((article) => (
                   <ArticleCard key={article.id} article={article} />
                 ))}

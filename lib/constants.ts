@@ -5,14 +5,15 @@ export const BRAND = {
 }
 
 export const COLORS = {
-  navy: '#0F1419',
-  cyan: '#00D9FF',
-  purple: '#8B5CF6',
-  magenta: '#D946EF',
-  gold: '#FBBF24',
+  indigo: '#1A1633',
+  cyan: '#00E5FF',
+  purple: '#9D4EDD',
+  pink: '#FF006E',
+  sage: '#E8F5F0',
+  coolGray: '#7B8BA8',
   white: '#FFFFFF',
-  lightGray: '#F9FAFB',
-  darkGray: '#374151',
+  offWhite: '#F5F7FA',
+  nearBlack: '#0F1419',
 }
 
 export const NAVIGATION = [
